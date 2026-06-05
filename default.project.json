@@ -1,0 +1,66 @@
+{
+  "name": "RobloxIdea",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      },
+
+      "BuildingSystem": {
+        "$className": "Folder",
+
+        "BuildingDefinitions": {
+          "$path": "src/replicated/BuildingSystem/BuildingDefinitions.luau"
+        },
+
+        "Remotes": {
+          "$className": "Folder",
+
+          "BuildRequest": {
+            "$className": "RemoteEvent"
+          }
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src/server/init.server.luau"
+      },
+
+      "BuildingService.server": {
+        "$path": "src/server/BuildingService.server.luau"
+      },
+
+      "PlayerData.server": {
+        "$path": "src/server/PlayerData.server.luau"
+      },
+
+      "SellService.server": {
+        "$path": "src/server/SellService.server.luau"
+      },
+
+      "TestScript": {
+        "$path": "src/server/TestScript.server.luau"
+      },
+
+      "TreeService.server": {
+        "$path": "src/server/TreeService.server.luau"
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client/init.client.luau"
+        },
+
+        "BuildingClient.client": {
+          "$path": "src/client/BuildingClient.client.luau"
+        }
+      }
+    }
+  }
+}
