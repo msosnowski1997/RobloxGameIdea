@@ -13,6 +13,33 @@ The player can:
 - sign contracts,
 - build a producer brand.
 
+## Player Marketplaces
+
+Resources and goods can be bought from other players.
+
+To buy from another player, the buyer must visit that player's island or city
+and purchase goods from their local marketplace. Trade should feel like visiting
+a real producer, not like buying from a global anonymous menu.
+
+At the beginning, the player can see the current list of offers only from the
+lobby, which works as the shared starting settlement. This makes the lobby an
+early social and economic hub.
+
+Each player can create buy offers and sell offers in their own marketplace:
+
+- sell offers allow other players to buy stocked goods,
+- buy offers allow other players to deliver requested goods for a listed price,
+- prices are fully controlled by players,
+- there are no fixed system prices for player-traded goods.
+
+Player offers are available to other players while the owner is online. Offers
+from friends are always visible to the player, which makes reliable trade
+partners easier to find and encourages social economic networks.
+
+If the owner's city already has the maximum number of visiting players, the game
+creates another instance of the same city. This keeps popular markets accessible
+without removing the feeling that buyers are visiting a specific player's place.
+
 ## Why Players Trade
 
 Trade works only when players genuinely need each other.

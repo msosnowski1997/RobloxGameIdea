@@ -98,6 +98,11 @@ Trade is the most important part of the game.
 
 Cities do not trade. Players trade.
 
+Players sell and buy through local marketplaces. To buy goods from another
+player, the buyer visits that player's island or city and purchases from their
+marketplace. At the start, the shared lobby is the place where players can
+discover the current list of available offers.
+
 Trade is necessary because nobody can be good at everything.
 
 Example dependency:
