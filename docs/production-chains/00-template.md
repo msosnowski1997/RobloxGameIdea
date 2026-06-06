@@ -1,104 +1,104 @@
-# Template Chainu
+# Chain Template
 
-Kopiuj ten plik dla każdego nowego łańcucha produkcji.
+Copy this file for every new production chain.
 
-## Nazwa Chainu
+## Chain Name
 
-Krótki opis fantazji gracza.
+A short description of the player's fantasy.
 
-Przykład:
+Example:
 
-> Jestem dostawcą drewna i podstawowych materiałów budowlanych dla innych graczy.
+> I am a supplier of wood and basic construction materials for other players.
 
-## Podsumowanie
+## Summary
 
-| Pole | Wartość |
+| Field | Value |
 | --- | --- |
-| Specjalizacja główna | Logging / Mining / Farming / Smithing / Carpentry |
-| Poziom gracza | Early game / Mid game / Late game |
-| Surowiec startowy | Nazwa surowca |
-| Produkt końcowy | Nazwa produktu |
-| Pierwszy budynek | Nazwa budynku |
-| Pierwsze ulepszenie | Nazwa ulepszenia |
-| Pierwszy moment handlu | Co inny gracz może kupić |
+| Main specialization | Logging / Mining / Farming / Smithing / Carpentry |
+| Player stage | Early game / Mid game / Late game |
+| Starting resource | Resource name |
+| Final product | Product name |
+| First building | Building name |
+| First upgrade | Upgrade name |
+| First trade moment | What another player can buy |
 
-## Graph Produkcji
+## Production Graph
 
-PHPStorm Markdown preview obsługuje Mermaid, więc diagramy można trzymać
-bezpośrednio w plikach `.md`.
+PHPStorm Markdown preview supports Mermaid, so diagrams can be kept directly in
+`.md` files.
 
 ```mermaid
 flowchart LR
-    A["Surowiec z mapy"] --> B["Materiał podstawowy"]
-    B --> C["Pierwszy budynek"]
-    C --> D["Ulepszenie produkcyjne"]
-    D --> E["Produkt przetworzony"]
-    E --> F["Produkt handlowy / kolejny chain"]
+    A["Map resource"] --> B["Basic material"]
+    B --> C["First building"]
+    C --> D["Production upgrade"]
+    D --> E["Processed product"]
+    E --> F["Trade product / next chain"]
 ```
 
-## Graph Budynków I Odblokowań
+## Building And Unlock Graph
 
 ```mermaid
 flowchart TD
-    A["Skill lub akcja startowa"] --> B["Budowa: pierwszy budynek"]
-    B --> C["Odblokowanie: podstawowa receptura"]
-    B --> D["Ulepszenie: moduł produkcyjny"]
-    D --> E["Odblokowanie: receptura przetworzona"]
-    E --> F["Nowe budynki / handel / specjalizacja"]
+    A["Skill or starter action"] --> B["Build: first building"]
+    B --> C["Unlock: basic recipe"]
+    B --> D["Upgrade: production module"]
+    D --> E["Unlock: processed recipe"]
+    E --> F["New buildings / trade / specialization"]
 ```
 
-## Etapy Chainu
+## Chain Stages
 
-| Etap | Akcja gracza | Wejście | Wyjście | Budynek | Cel projektowy |
+| Stage | Player action | Input | Output | Building | Design goal |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Zbiera surowiec | Brak | Surowiec | Brak | Pierwszy kontakt z systemem |
-| 2 | Przetwarza surowiec | Surowiec | Materiał | Prosty budynek albo ręczna akcja | Pokazanie receptur |
-| 3 | Buduje infrastrukturę | Materiał | Budynek | Plac budowy | Miasto jako narzędzie produkcji |
-| 4 | Ulepsza budynek | Materiał + koszt | Ulepszenie | Budynek bazowy | Odblokowanie głębszej produkcji |
-| 5 | Produkuje towar | Materiał | Produkt | Ulepszony budynek | Pierwszy produkt rynkowy |
+| 1 | Gathers resource | None | Resource | None | First contact with the system |
+| 2 | Processes resource | Resource | Material | Simple building or manual action | Showing recipes |
+| 3 | Builds infrastructure | Material | Building | Construction site | City as a production tool |
+| 4 | Upgrades building | Material + cost | Upgrade | Base building | Unlocking deeper production |
+| 5 | Produces goods | Material | Product | Upgraded building | First market product |
 
-## Receptury
+## Recipes
 
-| Receptura | Wejście | Wyjście | Czas | Budynek | Uwagi |
+| Recipe | Input | Output | Time | Building | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Nazwa receptury | 5 surowca | 1 produkt | 30 s | Budynek | Do ustalenia |
+| Recipe name | 5 resources | 1 product | 30 s | Building | To be decided |
 
-## Budynki I Ulepszenia
+## Buildings And Upgrades
 
-| Obiekt | Typ | Koszt | Odblokowuje | Rola |
+| Object | Type | Cost | Unlocks | Role |
 | --- | --- | --- | --- | --- |
-| Nazwa budynku | Budynek | Koszt budowy | Receptury | Funkcja w mieście |
-| Nazwa ulepszenia | Ulepszenie | Koszt ulepszenia | Receptury | Funkcja w chainie |
+| Building name | Building | Build cost | Recipes | Function in the city |
+| Upgrade name | Upgrade | Upgrade cost | Recipes | Function in the chain |
 
-## Balans Anno-Like
+## Anno-Like Balance
 
-Ta sekcja pomaga myśleć o przepustowości.
+This section helps reason about throughput.
 
-| Pytanie | Odpowiedź |
+| Question | Answer |
 | --- | --- |
-| Ile surowca potrzeba na 1 produkt końcowy? | Do ustalenia |
-| Czy jeden budynek wejściowy zasila jeden budynek przetwarzający? | Do ustalenia |
-| Czy chain ma wąskie gardło? | Do ustalenia |
-| Czy produkt jest używany lokalnie, czy sprzedawany? | Do ustalenia |
-| Czy chain wymaga innych specjalizacji? | Do ustalenia |
+| How much raw resource is needed for 1 final product? | To be decided |
+| Does one input building feed one processing building? | To be decided |
+| Does the chain have a bottleneck? | To be decided |
+| Is the product used locally or sold? | To be decided |
+| Does the chain require other specializations? | To be decided |
 
-## Handel I Zależności
+## Trade And Dependencies
 
-Opisz, kto może potrzebować produktu.
+Describe who may need the product.
 
-Przykład:
+Example:
 
-- górnik potrzebuje desek do magazynu,
-- farmer potrzebuje desek do ogrodzeń,
-- stolarz potrzebuje desek do mebli.
+- a miner needs planks for a warehouse,
+- a farmer needs planks for fences,
+- a carpenter needs planks for furniture.
 
-## Ryzyka Projektowe
+## Design Risks
 
-Krótko wypisz problemy, które mogą zepsuć chain.
+Briefly list problems that could break the chain.
 
-Przykład:
+Example:
 
-- za dużo ręcznego klikania na początku,
-- zbyt szybkie odblokowanie automatyzacji,
-- produkt nie ma zastosowania poza własnym miastem,
-- chain nie tworzy żadnej zależności handlowej.
+- too much manual clicking at the start,
+- automation unlocks too quickly,
+- the product has no use outside the player's own city,
+- the chain creates no trade dependency.

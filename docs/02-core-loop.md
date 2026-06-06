@@ -1,24 +1,24 @@
-﻿# Core Loop
+# Core Loop
 
-Core loop prowadzi gracza od prostych czynności simulatorowych do specjalizacji,
-produkcji i handlu z innymi graczami.
+The core loop takes the player from simple simulator-style actions into
+specialization, production, and trading with other players.
 
-## 1. Zdobywaj Surowce
+## 1. Gather Resources
 
-Na początku gracz wykonuje proste aktywności:
+At the beginning, the player performs simple activities:
 
-- ścina drzewa,
-- wydobywa kamień,
-- zbiera podstawowe materiały.
+- cuts down trees,
+- mines stone,
+- gathers basic materials.
 
-To jest pierwszy kontakt z grą. Zbieranie powinno być zrozumiałe od razu i dawać
-szybką informację zwrotną: surowiec, doświadczenie, postęp.
+This is the player's first contact with the game. Gathering should be instantly
+understandable and provide quick feedback: resources, experience, progress.
 
-## 2. Rozwijaj Umiejętności
+## 2. Develop Skills
 
-Każda aktywność rozwija odpowiedni skill.
+Each activity develops the relevant skill.
 
-Przykładowe skille:
+Example skills:
 
 - Logging,
 - Mining,
@@ -28,88 +28,88 @@ Przykładowe skille:
 - Trading,
 - Cooking.
 
-Rozwój skillów powinien od początku sugerować graczowi, że wybory mają znaczenie.
-Im wyższy poziom, tym większy koszt dalszego rozwoju.
+Skill progression should suggest from the start that player choices matter. The
+higher the level, the higher the cost of further development.
 
-## 3. Odblokowuj Receptury
+## 3. Unlock Recipes
 
-Wyższy poziom umiejętności odblokowuje:
+Higher skill levels unlock:
 
-- nowe produkty,
-- nowe budynki,
-- lepsze narzędzia,
-- bardziej złożone łańcuchy produkcyjne.
+- new products,
+- new buildings,
+- better tools,
+- more complex production chains.
 
-Przykład progresji drwala:
+Example logging progression:
 
-1. Drewno.
-2. Deski.
-3. Belki.
-4. Meble.
+1. Wood.
+2. Planks.
+3. Beams.
+4. Furniture.
 
-Przykład progresji kowala:
+Example smithing progression:
 
-1. Ruda.
-2. Sztabki.
-3. Narzędzia.
-4. Maszyny.
+1. Ore.
+2. Ingots.
+3. Tools.
+4. Machines.
 
-## 4. Rozbudowuj Miasto
+## 4. Expand The City
 
-Miasto jest bazą produkcyjną gracza.
+The city is the player's production base.
 
-Gracz buduje obiekty, które zwiększają jego możliwości:
+The player builds objects that increase their capabilities:
 
-- magazyny,
-- warsztaty,
-- tartaki,
-- kuźnie,
-- farmy,
-- sklepy.
+- warehouses,
+- workshops,
+- sawmills,
+- forges,
+- farms,
+- shops.
 
-Każdy budynek powinien mieć konkretną funkcję w produkcji, logistyce albo handlu.
+Each building should have a specific function in production, logistics, or trade.
 
-## 5. Produkuj Dobra
+## 5. Produce Goods
 
-Produkty mają coraz bardziej złożone receptury.
+Products have increasingly complex recipes.
 
-Przykład krzesła:
+Example chair:
 
-- 10 drewna,
-- 2 śruby.
+- 10 wood,
+- 2 screws.
 
-Przykład stołu:
+Example table:
 
-- 25 drewna,
-- 8 śrub,
-- lakier.
+- 25 wood,
+- 8 screws,
+- varnish.
 
-Przykład luksusowego stołu:
+Example luxury table:
 
-- specjalne drewno,
-- stalowe elementy,
-- dekoracje.
+- special wood,
+- steel parts,
+- decorations.
 
-Im bardziej zaawansowany produkt, tym więcej zależności od innych specjalizacji.
+The more advanced the product, the more it depends on other specializations.
 
-## 6. Sprzedawaj Innym Graczom
+## 6. Sell To Other Players
 
-Najważniejszą częścią gry jest handel.
+Trade is the most important part of the game.
 
-Nie handlują miasta. Handlują gracze.
+Cities do not trade. Players trade.
 
-Handel jest potrzebny, bo nie da się być dobrym we wszystkim.
+Trade is necessary because nobody can be good at everything.
 
-Przykład zależności:
+Example dependency:
 
-- gracz A jest mistrzem stolarstwa,
-- gracz B jest mistrzem kowalstwa,
-- gracz C jest mistrzem rolnictwa.
+- player A is a master carpenter,
+- player B is a master blacksmith,
+- player C is a master farmer.
 
-W praktyce:
+In practice:
 
-- gracz A potrzebuje narzędzi od gracza B,
-- gracz B potrzebuje jedzenia od gracza C,
-- gracz C potrzebuje mebli od gracza A.
+- player A needs tools from player B,
+- player B needs food from player C,
+- player C needs furniture from player A.
 
-W ten sposób powstaje naturalna gospodarka.
+This creates a natural economy.
