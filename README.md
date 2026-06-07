@@ -27,6 +27,9 @@ luxury items, or other goods.
 - [Production Chains](docs/07-production-chains.md)
 - [First 2-3 Hours Production Plan](docs/08-first-2-hours-production-plan.md)
 - [First 30 Minutes: Shared Settlement Without Grind](docs/09-first-30-minutes-shared-settlement.md)
+- [Inventory System](docs/systems/inventory.md)
+- [Quest System](docs/systems/quests.md)
+- [Dialogue System](docs/systems/dialogue.md)
 
 ## Status
 
