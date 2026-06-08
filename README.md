@@ -1,6 +1,6 @@
 # Roblox Game Idea
 
-Concept documentation for an economic crafting game in Roblox.
+Concept documentation for an RPG economic crafting game in Roblox.
 
 ## One-Sentence Concept
 
