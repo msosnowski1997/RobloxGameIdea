@@ -18,6 +18,7 @@ This keeps the system flexible for:
 - different item rarities,
 - different stack sizes per item,
 - durability, upgrades, and item-specific state,
+- expandable inventory and hotbar capacity,
 - inventory UI with 2D icons,
 - real 3D models when an item is held,
 - future storage crates, trading, crafting, and saving.
@@ -291,6 +292,54 @@ The server should send inventory updates through a remote event such as
 The client should not decide whether an item exists or whether an action is
 valid.
 
+## Inventory And Hotbar Capacity
+
+Inventory capacity should be upgradeable.
+
+The player should start with a small number of inventory slots and unlock more
+slots over time through progression, buildings, equipment, upgrades, or trade.
+This makes inventory space part of the economy without forcing early players to
+manage too much UI.
+
+Hotbar capacity should also be upgradeable, but separately from total inventory
+capacity.
+
+The inventory answers what the player owns. The hotbar answers which owned
+items are quickly accessible. Increasing one should not automatically increase
+the other.
+
+Example player state:
+
+```lua
+{
+	Slots = {},
+	Capacity = {
+		InventorySlots = 20,
+		HotbarSlots = 5,
+	},
+	Hotbar = {
+		[1] = "item_a1",
+		[2] = "Wood",
+	}
+}
+```
+
+Rules:
+
+- the server owns the current inventory and hotbar slot counts,
+- inventory slot upgrades increase how many item stacks or item records the
+  player can store,
+- hotbar slot upgrades increase how many quick-access assignments the player
+  can have,
+- the client may request hotbar assignment changes, but the server validates
+  that the item exists and the target hotbar slot is unlocked,
+- items should not be destroyed when capacity changes; if capacity is reduced
+  later, overflow behavior must be handled explicitly before shipping.
+
+For MVP, the first version can use fixed starting values and add the upgrade
+flow later. The data shape should still leave room for `InventorySlots` and
+`HotbarSlots` so the UI and services do not need to be redesigned.
+
 ## Held 3D Models
 
 Held items should use Roblox `Tool` instances.
@@ -343,7 +392,10 @@ Save:
 - `UniqueId`,
 - `Durability`,
 - instance-specific rarity or upgrades,
-- slot order if the inventory UI needs stable ordering.
+- slot order if the inventory UI needs stable ordering,
+- unlocked inventory slot count,
+- unlocked hotbar slot count,
+- hotbar assignments if the player can customize them.
 
 Do not save:
 
@@ -365,13 +417,16 @@ The first implementation should include:
 - non-stackable item records with `UniqueId`,
 - `InventoryUpdated` remote event,
 - simple inventory UI rendering icons and amounts,
-- equip request that creates a matching `Tool`.
+- equip request that creates a matching `Tool`,
+- starting inventory and hotbar capacity values in the player inventory state.
 
 DataStore saving can be added after the basic inventory behavior is working.
 
 ## Open Questions
 
-- Should inventory have a fixed number of slots or expandable capacity?
+- What are the starting and maximum inventory slot counts?
+- What are the starting and maximum hotbar slot counts?
+- Which progression systems unlock more inventory and hotbar slots?
 - Should stackable resources occupy regular slots or a separate materials tab?
 - Should equipped tools stay visible inside inventory slots?
 - Should sorting preserve slot positions or rebuild them automatically?
